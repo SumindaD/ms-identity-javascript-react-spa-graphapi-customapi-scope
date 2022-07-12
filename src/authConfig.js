@@ -12,9 +12,9 @@ import { LogLevel } from "@azure/msal-browser";
  */
 export const msalConfig = {
     auth: {
-        clientId: "cc18ac91-92f5-4da5-ab53-01e81ec6cc74",
-        authority: "https://login.microsoftonline.com/7f2c1900-9fd4-4b89-91d3-79a649996f0a", // This is a URL (e.g. https://login.microsoftonline.com/{your tenant ID})
-        redirectUri: "https://aas-lk01-sea-p-seabreeze-prmcol.azurewebsites.net"
+        clientId: "{clientId}",
+        authority: "https://login.microsoftonline.com/{TenantID}", // This is a URL (e.g. https://login.microsoftonline.com/{your tenant ID})
+        redirectUri: "{redirectUri}"
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -56,5 +56,5 @@ export const loginRequest = {
 };
 
 export const backendAPIRequest = {
-    scopes: ["api://cc18ac91-92f5-4da5-ab53-01e81ec6cc74/Invoke"]
+    scopes: ["api://{clientId}/Invoke"]
 };
